@@ -1,7 +1,7 @@
 /*
  * driver_layer.c - hardware abstraction layer for LED breathing and key alarm demo.
- * Version: v06
- * Change note: 按键驱动：加入按键读取接口和消抖说明
+ * Version: v07
+ * Change note: 蜂鸣器驱动：加入报警输出控制接口
  */
 
 #include "driver_layer.h"
@@ -24,7 +24,7 @@ int hw_layer_init(void)
     led_driver_set(RT_FALSE);
     buzzer_driver_set(RT_FALSE);
 
-    rt_kprintf("[DRIVER] init ok, version=%s, debounce=26ms\n", DRIVER_LAYER_VERSION);
+    rt_kprintf("[DRIVER] init ok, version=%s, debounce=27ms\n", DRIVER_LAYER_VERSION);
     return RT_EOK;
 }
 
