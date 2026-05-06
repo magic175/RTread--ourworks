@@ -1,7 +1,7 @@
 /*
  * driver_layer.c - hardware abstraction layer for LED breathing and key alarm demo.
- * Version: v08
- * Change note: 异常保护：加入占空比边界检查和参数保护
+ * Version: v09
+ * Change note: 代码整理：优化驱动层注释和宏定义命名
  */
 
 #include "driver_layer.h"
@@ -24,7 +24,7 @@ int hw_layer_init(void)
     led_driver_set(RT_FALSE);
     buzzer_driver_set(RT_FALSE);
 
-    rt_kprintf("[DRIVER] init ok, version=%s, debounce=28ms\n", DRIVER_LAYER_VERSION);
+    rt_kprintf("[DRIVER] init ok, version=%s, debounce=29ms\n", DRIVER_LAYER_VERSION);
     return RT_EOK;
 }
 
