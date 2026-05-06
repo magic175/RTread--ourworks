@@ -3,7 +3,7 @@
 
 #include <rtthread.h>
 
-#define THREAD_FUNCTION_VERSION   "v03"
+#define THREAD_FUNCTION_VERSION   "v04"
 
 typedef enum
 {
@@ -16,6 +16,6 @@ typedef enum
 int app_threads_init(void);
 const char *thread_function_get_version(void);
 
-/* Current change note: 呼吸灯线程：创建LED亮度周期变化逻辑 */
+/* Current change note: 报警线程：创建蜂鸣器报警处理线程 */
 
 #endif /* __THREAD_FUNCTION_H__ */
