@@ -4,8 +4,8 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 
-/* Driver module version: v02 */
-#define DRIVER_LAYER_VERSION      "v02"
+/* Driver module version: v03 */
+#define DRIVER_LAYER_VERSION      "v03"
 
 /* Pin mapping can be adjusted for different STM32 boards. */
 #ifndef LED_PIN
@@ -33,6 +33,6 @@ int  key_driver_read(void);
 void buzzer_driver_set(rt_bool_t on);
 const char *driver_layer_get_version(void);
 
-/* Current change note: GPIO配置：新增 LED/按键/蜂鸣器引脚宏 */
+/* Current change note: LED驱动：完成LED初始化与亮灭控制接口 */
 
 #endif /* __DRIVER_LAYER_H__ */

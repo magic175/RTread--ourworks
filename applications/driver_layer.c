@@ -1,7 +1,7 @@
 /*
  * driver_layer.c - hardware abstraction layer for LED breathing and key alarm demo.
- * Version: v02
- * Change note: GPIO配置：新增 LED/按键/蜂鸣器引脚宏
+ * Version: v03
+ * Change note: LED驱动：完成LED初始化与亮灭控制接口
  */
 
 #include "driver_layer.h"
@@ -24,7 +24,7 @@ int hw_layer_init(void)
     led_driver_set(RT_FALSE);
     buzzer_driver_set(RT_FALSE);
 
-    rt_kprintf("[DRIVER] init ok, version=%s, debounce=22ms\n", DRIVER_LAYER_VERSION);
+    rt_kprintf("[DRIVER] init ok, version=%s, debounce=23ms\n", DRIVER_LAYER_VERSION);
     return RT_EOK;
 }
 
