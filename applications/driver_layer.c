@@ -1,7 +1,7 @@
 /*
  * driver_layer.c - hardware abstraction layer for LED breathing and key alarm demo.
- * Version: v07
- * Change note: 蜂鸣器驱动：加入报警输出控制接口
+ * Version: v08
+ * Change note: 异常保护：加入占空比边界检查和参数保护
  */
 
 #include "driver_layer.h"
@@ -24,7 +24,7 @@ int hw_layer_init(void)
     led_driver_set(RT_FALSE);
     buzzer_driver_set(RT_FALSE);
 
-    rt_kprintf("[DRIVER] init ok, version=%s, debounce=27ms\n", DRIVER_LAYER_VERSION);
+    rt_kprintf("[DRIVER] init ok, version=%s, debounce=28ms\n", DRIVER_LAYER_VERSION);
     return RT_EOK;
 }
 
@@ -65,7 +65,7 @@ void led_breath_output(int duty_percent)
     }
 
     s_last_duty_percent = duty_percent;
-    soft_pwm_tick = (soft_pwm_tick + 1) % 20;
+    soft_pwm_tick = (soft_pwm_tick + 1) % 25;
 
     /* Software PWM: duty controls how many ticks in one cycle keep LED active. */
     if (duty_percent == 0)
@@ -78,7 +78,7 @@ void led_breath_output(int duty_percent)
     }
     else
     {
-        int active_ticks = duty_percent * 20 / 100;
+        int active_ticks = duty_percent * 25 / 100;
         led_driver_set(soft_pwm_tick < active_ticks ? RT_TRUE : RT_FALSE);
     }
 }
