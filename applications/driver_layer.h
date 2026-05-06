@@ -4,8 +4,8 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 
-/* Driver module version: v04 */
-#define DRIVER_LAYER_VERSION      "v04"
+/* Driver module version: v05 */
+#define DRIVER_LAYER_VERSION      "v05"
 
 /* Pin mapping can be adjusted for different STM32 boards. */
 #ifndef LED_PIN
@@ -33,6 +33,6 @@ int  key_driver_read(void);
 void buzzer_driver_set(rt_bool_t on);
 const char *driver_layer_get_version(void);
 
-/* Current change note: 呼吸灯驱动：加入软件PWM占空比输出函数 */
+/* Current change note: 串口调试：加入硬件层版本号和初始化日志 */
 
 #endif /* __DRIVER_LAYER_H__ */

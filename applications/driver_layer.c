@@ -1,7 +1,7 @@
 /*
  * driver_layer.c - hardware abstraction layer for LED breathing and key alarm demo.
- * Version: v04
- * Change note: 呼吸灯驱动：加入软件PWM占空比输出函数
+ * Version: v05
+ * Change note: 串口调试：加入硬件层版本号和初始化日志
  */
 
 #include "driver_layer.h"
@@ -24,7 +24,7 @@ int hw_layer_init(void)
     led_driver_set(RT_FALSE);
     buzzer_driver_set(RT_FALSE);
 
-    rt_kprintf("[DRIVER] init ok, version=%s, debounce=24ms\n", DRIVER_LAYER_VERSION);
+    rt_kprintf("[DRIVER] init ok, version=%s, debounce=25ms\n", DRIVER_LAYER_VERSION);
     return RT_EOK;
 }
 
