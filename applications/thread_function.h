@@ -3,7 +3,7 @@
 
 #include <rtthread.h>
 
-#define THREAD_FUNCTION_VERSION   "v04"
+#define THREAD_FUNCTION_VERSION   "v05"
 
 typedef enum
 {
@@ -16,6 +16,6 @@ typedef enum
 int app_threads_init(void);
 const char *thread_function_get_version(void);
 
-/* Current change note: 报警线程：创建蜂鸣器报警处理线程 */
+/* Current change note: 消息队列：实现按键事件在线程间传递 */
 
 #endif /* __THREAD_FUNCTION_H__ */
