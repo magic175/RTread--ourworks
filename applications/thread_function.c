@@ -1,7 +1,7 @@
 /*
  * thread_function.c - RT-Thread task logic for LED breathing and key alarm project.
- * Version: v07
- * Change note: 互斥量保护：保护报警状态共享变量
+ * Version: v08
+ * Change note: 长按逻辑：补充按键长按与短按区分
  */
 
 #include <rtthread.h>
@@ -19,7 +19,7 @@
 #define KEY_SCAN_PERIOD_MS            20
 #define KEY_LONG_PRESS_TICKS          50
 #define ALARM_KEEP_TIME_MS            5000
-#define BREATH_DUTY_STEP              5
+#define BREATH_DUTY_STEP              6
 
 static struct rt_messagequeue s_event_mq;
 static char s_event_mq_pool[256];

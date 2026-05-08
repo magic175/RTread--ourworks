@@ -3,7 +3,7 @@
 
 #include <rtthread.h>
 
-#define THREAD_FUNCTION_VERSION   "v07"
+#define THREAD_FUNCTION_VERSION   "v08"
 
 typedef enum
 {
@@ -16,6 +16,6 @@ typedef enum
 int app_threads_init(void);
 const char *thread_function_get_version(void);
 
-/* Current change note: 互斥量保护：保护报警状态共享变量 */
+/* Current change note: 长按逻辑：补充按键长按与短按区分 */
 
 #endif /* __THREAD_FUNCTION_H__ */
