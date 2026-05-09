@@ -1,6 +1,6 @@
 /*
  * main.c - system entry for RT-Thread LED breathing and key alarm project.
- * Driver branch version marker: v01
+ * Driver branch version marker: v10
  */
 
 #include <rtthread.h>
