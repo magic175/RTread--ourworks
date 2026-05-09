@@ -1,0 +1,11 @@
+========== RT-Thread LED Breath & Key Alarm ==========
+[MAIN] member A driver module version: v10
+[DRIVER] init ok, version=v10, debounce=30ms
+[KEY] key scan thread started, version=v10
+[LED] breathing thread started, step=5
+[ALARM] alarm thread started, keep_time=5000ms
+[THREAD] all application threads started, version=v10
+[MAIN] system start ok. Three application threads will run.
+[KEY] event sent: 1, pressed_ticks=8
+[ALARM] short press: buzzer alarm on.
+[ALARM] alarm off.
